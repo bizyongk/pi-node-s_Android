@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Node S (for Pi) 사용 방법</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans KR", sans-serif; line-height: 1.7; color: #222; max-width: 800px; margin: 0 auto; padding: 24px; background: #fff; }
+  h1 { font-size: 1.6em; border-bottom: 2px solid #eee; padding-bottom: 12px; }
+  h2 { font-size: 1.2em; margin-top: 34px; color: #1a1a1a; }
+  p, li { font-size: 1em; }
+  ol, ul { padding-left: 22px; }
+  li { margin: 7px 0; }
+  a { color: #0a66c2; }
+  .lead { color: #555; font-size: 1.05em; }
+  .tip { background: #fff8e1; border-left: 4px solid #ffc107; padding: 10px 14px; border-radius: 4px; margin: 12px 0; }
+  .updated { color: #888; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<h1>Node S (for Pi) 사용 방법</h1>
+<p class="lead">노드S는 PC에서 운영 중인 노드의 상태를 휴대폰으로 모니터링하고, 문제가 생기면 푸시 알림으로 알려주는 서비스입니다. 아래 순서대로 따라 하시면 됩니다.</p>
+
+<h2>1. 시작하기 (앱 설치 · 로그인)</h2>
+<ol>
+  <li>Google Play에서 <strong>Node S (for Pi)</strong> 앱을 설치합니다.</li>
+  <li>앱을 열고 <strong>Google 계정으로 로그인</strong>합니다. (로그인하면 자동으로 가입되며, 가입 보너스 포인트가 지급됩니다.)</li>
+</ol>
+
+<h2>2. PC에 노드S 설치하기</h2>
+<ol>
+  <li>모니터링할 PC에 <strong>노드S PC 프로그램</strong>을 설치하고 실행합니다.</li>
+  <li>처음 실행하면 <strong>초기 설정 마법사</strong>가 나타납니다. 안내에 따라 설정을 완료하세요.</li>
+  <li>설정이 끝나면 프로그램이 PC 상태를 자동으로 보고하기 시작합니다. 창을 닫아도 <strong>트레이(작업 표시줄 알림 영역)</strong>에서 계속 실행됩니다.</li>
+</ol>
+<div class="tip">💡 PC 프로그램이 켜져 있어야 모니터링이 됩니다. <strong>[메뉴 &gt; 윈도우 시작 시 자동 실행]</strong>을 켜두면 PC를 켤 때 자동으로 실행돼 편리합니다.</div>
+
+<h2>3. 앱과 PC 연동하기 (가장 중요)</h2>
+<ol>
+  <li>PC 프로그램 상단 메뉴에서 <strong>[📱 모바일 앱 연동]</strong>을 클릭합니다. → <strong>QR 코드</strong>와 인증코드가 표시됩니다.</li>
+  <li>휴대폰 앱 홈 화면에서 <strong>＋(추가) 버튼</strong>을 눌러 <strong>QR 코드 스캔</strong>을 실행합니다.</li>
+  <li>PC 화면의 QR 코드를 비추면 <strong>해당 PC(노드)가 자동으로 등록</strong>됩니다.</li>
+</ol>
+<div class="tip">💡 여러 대의 PC를 모니터링하려면, PC마다 위 연동 과정을 반복하면 됩니다.</div>
+
+<h2>4. 노드 상태 모니터링</h2>
+<ul>
+  <li>앱 홈 화면에 등록된 노드들이 카드로 표시됩니다.</li>
+  <li><strong>온라인 / 오프라인</strong> 상태와 마지막 확인 시각, 그리고 <strong>도커 · 파이 · 블록</strong> 등 세부 상태를 한눈에 볼 수 있습니다.</li>
+  <li>카드를 누르면 해당 노드의 <strong>상세 정보</strong>를 볼 수 있습니다.</li>
+</ul>
+
+<h2>5. 알림 받기</h2>
+<ul>
+  <li>노드가 <strong>오프라인이 되거나 다시 온라인으로 복구</strong>되면 푸시 알림을 받습니다.</li>
+  <li>알림 받을 시간대는 <strong>[메뉴 &gt; 알림 시간 설정]</strong>에서 조정할 수 있습니다.</li>
+  <li>받은 알림은 앱의 <strong>[알림&amp;공지]</strong>에서 다시 확인할 수 있습니다.</li>
+</ul>
+
+<h2>6. 포인트 안내</h2>
+<ul>
+  <li>가입 시 <strong>보너스 포인트</strong>가 지급됩니다.</li>
+  <li>노드 <strong>1대를 모니터링하는 데 24시간마다 일정 포인트가 사용</strong>됩니다.</li>
+  <li>포인트가 부족하면 모니터링이 일시 중지됩니다. <strong>[포인트 충전]</strong> 또는 <strong>광고 시청(보상형 광고)</strong>으로 포인트를 채울 수 있습니다.</li>
+  <li>현재 잔액과 사용 내역은 앱 홈의 포인트 표시와 <strong>[포인트 내역]</strong>에서 확인할 수 있습니다.</li>
+</ul>
+
+<h2>7. 설정 및 관리</h2>
+<p>앱 왼쪽 위 <strong>[메뉴]</strong>에서 아래 기능을 사용할 수 있습니다.</p>
+<ul>
+  <li><strong>테마 설정</strong> — 밝은/어두운 화면</li>
+  <li><strong>글꼴 크기 설정</strong> — 글자 크기 조정</li>
+  <li><strong>알림 시간 설정</strong> — 알림 받을 시간대 지정</li>
+  <li><strong>장비 순서 변경</strong> — 노드 카드 순서 정렬</li>
+  <li><strong>장비 연동 해제</strong> — 더 이상 보지 않을 노드 제거</li>
+</ul>
+
+<h2>8. 문의</h2>
+<p>사용 중 궁금한 점이나 문제가 있으면 아래로 연락 주세요.</p>
+<ul>
+  <li>이메일: <a href="mailto:bizyongk@gmail.com">bizyongk@gmail.com</a></li>
+</ul>
+
+<p class="updated" style="margin-top:30px;">최종 업데이트: 2026년 6월 26일</p>
+</body>
+</html>
