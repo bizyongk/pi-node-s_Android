@@ -5,82 +5,231 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Node S (for Pi) 사용 방법</title>
 <style>
-  body { font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans KR", sans-serif; line-height: 1.7; color: #222; max-width: 800px; margin: 0 auto; padding: 24px; background: #fff; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans KR", sans-serif; line-height: 1.7; color: #222; max-width: 860px; margin: 0 auto; padding: 24px; background: #fff; }
   h1 { font-size: 1.6em; border-bottom: 2px solid #eee; padding-bottom: 12px; }
-  h2 { font-size: 1.2em; margin-top: 34px; color: #1a1a1a; }
+  h2 { font-size: 1.25em; margin-top: 44px; color: #1a1a1a; border-left: 5px solid #4ECDC4; padding-left: 10px; }
+  h3 { font-size: 1.05em; margin-top: 26px; color: #333; }
   p, li { font-size: 1em; }
   ol, ul { padding-left: 22px; }
   li { margin: 7px 0; }
   a { color: #0a66c2; }
   .lead { color: #555; font-size: 1.05em; }
-  .tip { background: #fff8e1; border-left: 4px solid #ffc107; padding: 10px 14px; border-radius: 4px; margin: 12px 0; }
+  .tip { background: #fff8e1; border-left: 4px solid #ffc107; padding: 10px 14px; border-radius: 4px; margin: 14px 0; }
+  .warn { background: #fdecea; border-left: 4px solid #e57373; padding: 10px 14px; border-radius: 4px; margin: 14px 0; }
   .updated { color: #888; font-size: 0.9em; }
+  /* 목차 */
+  .toc { background: #f7f9fa; border: 1px solid #e5e8ea; border-radius: 8px; padding: 14px 18px; margin: 18px 0 6px; }
+  .toc b { display: block; margin-bottom: 6px; }
+  .toc ol { margin: 0; }
+  .toc li { margin: 3px 0; }
+  /* 스크린샷 */
+  .shots { display: flex; flex-wrap: wrap; gap: 14px; margin: 14px 0 6px; }
+  .shots figure { margin: 0; width: 226px; }
+  .shots img { width: 100%; height: auto; border: 1px solid #ddd; border-radius: 12px; display: block; background: #111; }
+  .shots figcaption { font-size: 0.85em; color: #666; text-align: center; margin-top: 6px; line-height: 1.4; }
+  .imgnote { color: #999; font-size: 0.85em; margin: 2px 0 0; }
+  @media (max-width: 540px) { .shots figure { width: 47%; } }
 </style>
 </head>
 <body>
 <h1>Node S (for Pi) 사용 방법</h1>
 <p class="lead">노드S는 PC에서 운영 중인 노드의 상태를 휴대폰으로 모니터링하고, 문제가 생기면 푸시 알림으로 알려주는 서비스입니다. 아래 순서대로 따라 하시면 됩니다.</p>
+<p class="imgnote">※ 화면 사진은 누르면 크게 볼 수 있습니다.</p>
 
-<h2>1. 시작하기 (앱 설치 · 로그인)</h2>
+<div class="toc">
+  <b>목차</b>
+  <ol>
+    <li><a href="#s1">시작하기 (앱 설치 · 로그인)</a></li>
+    <li><a href="#s2">PC에 노드S 설치하기</a></li>
+    <li><a href="#s3">앱과 PC 연동하기 (장비 등록)</a></li>
+    <li><a href="#s4">홈 화면 보는 법</a></li>
+    <li><a href="#s5">노드 상세 정보</a></li>
+    <li><a href="#s6">알림 받기</a></li>
+    <li><a href="#s7">포인트 안내</a></li>
+    <li><a href="#s8">포인트 충전 (결제 · 광고)</a></li>
+    <li><a href="#s9">설정 및 관리</a></li>
+    <li><a href="#s10">장비 연동 해제</a></li>
+    <li><a href="#s11">로그아웃 · 회원 탈퇴</a></li>
+    <li><a href="#s12">자주 묻는 질문</a></li>
+    <li><a href="#s13">문의</a></li>
+  </ol>
+</div>
+
+<h2 id="s1">1. 시작하기 (앱 설치 · 로그인)</h2>
 <ol>
-  <li>Google Play에서 <strong>Node S (for Pi)</strong> 앱을 설치합니다.</li>
-  <li>앱을 열고 <strong>Google 계정으로 로그인</strong>합니다. (로그인하면 자동으로 가입되며, 가입 보너스 포인트가 지급됩니다.)</li>
+  <li>Google Play에서 <strong>Node S (for Pi)</strong> 앱을 설치합니다.
+    (<a href="https://play.google.com/store/apps/details?id=kr.yongk.pinodes" target="_blank">Google Play에서 열기</a>)</li>
+  <li>앱을 열고 <strong>[🔑 Google 로그인]</strong> 버튼을 눌러 Google 계정으로 로그인합니다.</li>
+  <li>로그인하면 자동으로 가입되며, <strong>신규 가입 보너스 포인트(140P)</strong>가 지급됩니다.</li>
+  <li>로그인 직후에는 아직 등록된 장비가 없어 아래 오른쪽 화면처럼 표시됩니다. 이제 PC와 연동하면 됩니다.</li>
 </ol>
+<div class="shots">
+  <figure><a href="guide_img/00_login.png" target="_blank"><img src="guide_img/00_login.png" alt="로그인 화면" loading="lazy"></a><figcaption>① 로그인 화면 — [Google 로그인]을 누릅니다</figcaption></figure>
+  <figure><a href="guide_img/00b_home_empty.png" target="_blank"><img src="guide_img/00b_home_empty.png" alt="첫 홈 화면" loading="lazy"></a><figcaption>② 로그인 직후 홈 — 아직 장비가 없는 상태</figcaption></figure>
+</div>
 
-<h2>2. PC에 노드S 설치하기</h2>
+<h2 id="s2">2. PC에 노드S 설치하기</h2>
 <ol>
-  <li>모니터링할 PC에 <strong>노드S PC 프로그램</strong>을 설치하고 실행합니다.</li>
+  <li>모니터링할 PC에서 인터넷 브라우저를 열고, <strong>주소창에 <a href="http://sd.yongk.kr/" target="_blank">sd.yongk.kr</a> 을 입력</strong>하면 노드S PC 프로그램 설치 파일을 다운로드할 수 있습니다.</li>
+  <li>다운로드한 파일을 실행해 <strong>노드S PC 프로그램</strong>을 설치하고 실행합니다.</li>
   <li>처음 실행하면 <strong>초기 설정 마법사</strong>가 나타납니다. 안내에 따라 설정을 완료하세요.</li>
-  <li>설정이 끝나면 프로그램이 PC 상태를 자동으로 보고하기 시작합니다. 창을 닫아도 <strong>트레이(작업 표시줄 알림 영역)</strong>에서 계속 실행됩니다.</li>
+  <li>설정이 끝나면 아래처럼 <strong>메인 화면</strong>이 열리고, PC 상태를 자동으로 보고하기 시작합니다.</li>
 </ol>
+<div class="shots">
+  <figure><a href="guide_img/pc_01_main.png" target="_blank"><img src="guide_img/pc_01_main.png" alt="PC 프로그램 메인 화면" loading="lazy"></a><figcaption>노드S PC 프로그램 메인 화면 — 서버 연결 상태와 노드 정보를 실시간 표시</figcaption></figure>
+</div>
+<ul>
+  <li><strong>● 서버 연결됨</strong> — 프로그램이 서버와 정상 연결된 상태입니다.</li>
+  <li><strong>CPU · 메모리 · 도커 · 파이 노드 · 블록 높이 · 연결 수</strong> 등 노드 상태를 실시간으로 보여줍니다.</li>
+  <li><strong>[포트오픈 확인]</strong> — 노드 포트가 정상적으로 열려 있는지 점검합니다.</li>
+  <li>하단 <strong>[QR 코드 확인]</strong> — 곧바로 모바일 앱 연동용 QR 화면을 엽니다. <strong>[PC카톡 채팅 연결]</strong>은 문의 채널로 연결됩니다.</li>
+</ul>
 <div class="tip">💡 PC 프로그램이 켜져 있어야 모니터링이 됩니다. <strong>[메뉴 &gt; 윈도우 시작 시 자동 실행]</strong>을 켜두면 PC를 켤 때 자동으로 실행돼 편리합니다.</div>
 
-<h2>3. 앱과 PC 연동하기 (가장 중요)</h2>
+<h2 id="s3">3. 앱과 PC 연동하기 (장비 등록)</h2>
 <ol>
-  <li>PC 프로그램 상단 메뉴에서 <strong>[📱 모바일 앱 연동]</strong>을 클릭합니다. → <strong>QR 코드</strong>와 인증코드가 표시됩니다.</li>
-  <li>휴대폰 앱 홈 화면에서 <strong>＋(추가) 버튼</strong>을 눌러 <strong>QR 코드 스캔</strong>을 실행합니다.</li>
-  <li>PC 화면의 QR 코드를 비추면 <strong>해당 PC(노드)가 자동으로 등록</strong>됩니다.</li>
+  <li>PC 프로그램 상단 메뉴에서 <strong>[📱 모바일 앱 연동]</strong>을 클릭한 뒤 <strong>[앱 연동 QR 생성]</strong> 버튼을 누르면 QR 코드가 표시됩니다. (QR은 <strong>10분간 유효</strong>합니다)</li>
+  <li>휴대폰 앱 홈 화면 오른쪽 위 <strong>[＋ 장비 등록]</strong>을 누릅니다. 처음이라면 <strong>카메라 권한</strong>을 허용해 주세요.</li>
+  <li>카메라 화면이 열리면 PC의 QR 코드를 비춥니다.</li>
+  <li>등록 직전에 <strong>포인트 사용 안내창</strong>이 표시됩니다. <strong>[등록]</strong>을 누르면 장비 등록이 완료됩니다.</li>
 </ol>
-<div class="tip">💡 여러 대의 PC를 모니터링하려면, PC마다 위 연동 과정을 반복하면 됩니다.</div>
+<p class="imgnote" style="margin-top:14px;"><strong>PC 화면</strong> — 여기서 QR을 띄웁니다</p>
+<div class="shots">
+  <figure><a href="guide_img/pc_02_qr.png" target="_blank"><img src="guide_img/pc_02_qr.png" alt="PC 앱 연동 QR 화면" loading="lazy"></a><figcaption>PC: [📱 모바일 앱 연동] → [앱 연동 QR 생성]을 누르면 QR이 표시됩니다 (10분 유효)</figcaption></figure>
+</div>
+<p class="imgnote" style="margin-top:14px;"><strong>휴대폰 화면</strong> — 위 QR을 스캔합니다</p>
+<div class="shots">
+  <figure><a href="guide_img/15c_campermission.png" target="_blank"><img src="guide_img/15c_campermission.png" alt="카메라 권한" loading="lazy"></a><figcaption>① 처음 한 번, 카메라 권한을 [허용]</figcaption></figure>
+  <figure><a href="guide_img/15_qrscan.png" target="_blank"><img src="guide_img/15_qrscan.png" alt="QR 스캔" loading="lazy"></a><figcaption>② PC 화면의 QR 코드를 비춥니다</figcaption></figure>
+  <figure><a href="guide_img/15b_confirm.png" target="_blank"><img src="guide_img/15b_confirm.png" alt="등록 확인" loading="lazy"></a><figcaption>③ 포인트 안내 확인 후 [등록]</figcaption></figure>
+</div>
+<div class="tip">💡 휴대폰 <strong>기본 카메라</strong>로 QR을 찍어도 앱이 자동으로 열리며 같은 방식으로 등록됩니다.<br>
+💡 여러 대의 PC를 모니터링하려면, PC마다 위 연동 과정을 반복하면 됩니다.</div>
+<div class="warn">⚠️ 장비가 <strong>7일간 오프라인</strong> 상태로 지속되면 연동이 해제되어 <strong>재등록이 필요</strong>합니다.</div>
 
-<h2>4. 노드 상태 모니터링</h2>
+<h2 id="s4">4. 홈 화면 보는 법</h2>
+<div class="shots">
+  <figure><a href="guide_img/01_home.png" target="_blank"><img src="guide_img/01_home.png" alt="홈 화면" loading="lazy"></a><figcaption>등록된 장비들이 카드로 표시됩니다</figcaption></figure>
+</div>
 <ul>
-  <li>앱 홈 화면에 등록된 노드들이 카드로 표시됩니다.</li>
-  <li><strong>온라인 / 오프라인</strong> 상태와 마지막 확인 시각, 그리고 <strong>도커 · 파이 · 블록</strong> 등 세부 상태를 한눈에 볼 수 있습니다.</li>
-  <li>카드를 누르면 해당 노드의 <strong>상세 정보</strong>를 볼 수 있습니다.</li>
+  <li><strong>보유 포인트</strong> — 현재 잔액이 표시되고, 옆의 [포인트 내역]·[충전] 버튼으로 이동할 수 있습니다.</li>
+  <li><strong>장비 카드</strong> — 장비 이름, PC 프로그램 버전, 마지막 신호 시각, <strong>온라인/오프라인</strong> 상태가 표시됩니다.</li>
+  <li><strong>도커✓ · 파이✓ · 블록✓</strong> — 도커 실행 / Pi 노드 프로그램 실행 / 블록 동기화 상태를 한눈에 보여줍니다. 문제가 있으면 ✓ 대신 ✗로 표시됩니다.</li>
+  <li><strong>새로고침</strong> — 최신 상태를 바로 불러옵니다. (평소에도 자동으로 갱신됩니다)</li>
+  <li>오른쪽 위 <strong>🔔(종)</strong> — 받은 알림과 공지를 확인합니다.</li>
 </ul>
 
-<h2>5. 알림 받기</h2>
+<h2 id="s5">5. 노드 상세 정보</h2>
+<p>홈에서 장비 카드를 누르면 해당 노드의 상세 화면이 열립니다.</p>
+<div class="shots">
+  <figure><a href="guide_img/14_detail.png" target="_blank"><img src="guide_img/14_detail.png" alt="상세 상단" loading="lazy"></a><figcaption>① 장비 정보 + 노드 상태 (CPU·메모리·도커·Pi·블록·연결 수)</figcaption></figure>
+  <figure><a href="guide_img/14b_detail2.png" target="_blank"><img src="guide_img/14b_detail2.png" alt="상세 하단" loading="lazy"></a><figcaption>② 최근 알림 이력 + [연동 해제] 버튼</figcaption></figure>
+</div>
 <ul>
-  <li>노드가 <strong>오프라인이 되거나 다시 온라인으로 복구</strong>되면 푸시 알림을 받습니다.</li>
-  <li>알림 받을 시간대는 <strong>[메뉴 &gt; 알림 시간 설정]</strong>에서 조정할 수 있습니다.</li>
-  <li>받은 알림은 앱의 <strong>[알림&amp;공지]</strong>에서 다시 확인할 수 있습니다.</li>
+  <li><strong>장비 정보</strong> — PC 프로그램(클라이언트) 버전, 마지막 신호 시각</li>
+  <li><strong>노드 상태</strong> — CPU 스레드, 메모리 사용률, 도커/Pi 노드 실행 여부, Pi 프로그램 버전, 네트워크, 블록 높이(내 노드 vs 네트워크), 연결 수 등</li>
+  <li><strong>알림 이력</strong> — 이 장비에서 발생한 최근 알림 이력 (최대 30건)</li>
 </ul>
 
-<h2>6. 포인트 안내</h2>
+<h2 id="s6">6. 알림 받기</h2>
 <ul>
-  <li>가입 시 <strong>보너스 포인트</strong>가 지급됩니다.</li>
-  <li>노드 <strong>1대를 모니터링하는 데 24시간마다 일정 포인트가 사용</strong>됩니다.</li>
-  <li>포인트가 부족하면 모니터링이 일시 중지됩니다. <strong>[포인트 충전]</strong> 또는 <strong>광고 시청(보상형 광고)</strong>으로 포인트를 채울 수 있습니다.</li>
-  <li>현재 잔액과 사용 내역은 앱 홈의 포인트 표시와 <strong>[포인트 내역]</strong>에서 확인할 수 있습니다.</li>
+  <li>노드가 <strong>오프라인이 되거나 다시 복구</strong>되면 푸시 알림을 받습니다. (도커/Pi/블록 이상도 알림)</li>
+  <li>받은 알림은 홈 오른쪽 위 <strong>🔔</strong>를 눌러 <strong>[알림이력]</strong> 탭에서 다시 볼 수 있고, 서비스 공지는 <strong>[공지&amp;안내]</strong> 탭에 표시됩니다.</li>
+  <li>밤 시간 등 알림 팝업을 받고 싶지 않은 시간대는 <strong>[메뉴 &gt; 알림 시간 설정]</strong>에서 <strong>방해 금지 시간대</strong>를 켜면 됩니다. (이 시간대에 온 알림은 이력에는 저장되고 팝업만 표시되지 않습니다)</li>
+</ul>
+<div class="shots">
+  <figure><a href="guide_img/11_notif.png" target="_blank"><img src="guide_img/11_notif.png" alt="알림 이력" loading="lazy"></a><figcaption>알림&amp;공지 — 연동완료/복구/오프라인 이력</figcaption></figure>
+  <figure><a href="guide_img/05_quiet.png" target="_blank"><img src="guide_img/05_quiet.png" alt="알림 시간 설정" loading="lazy"></a><figcaption>방해 금지 시간대 설정</figcaption></figure>
+</div>
+
+<h2 id="s7">7. 포인트 안내</h2>
+<ul>
+  <li>신규 가입 시 <strong>보너스 140P</strong>가 지급됩니다.</li>
+  <li>장비 <strong>등록 시 10P</strong>가 사용되며, 이후 <strong>장비 1대당 24시간마다 10P</strong>가 차감됩니다.</li>
+  <li>포인트가 부족하면 해당 장비의 <strong>모니터링이 일시 중지</strong>되고 알림도 함께 중단됩니다. <strong>충전 후 장비의 [활성화] 버튼</strong>을 누르면 즉시 재개됩니다.</li>
+  <li>잔액과 사용 내역은 홈의 <strong>[포인트 내역]</strong>에서 확인합니다 — <strong>기기별 차감 시간</strong> 탭(다음 차감 예정 시각)과 <strong>적립·차감 내역</strong> 탭(전체 거래 기록)으로 나뉩니다.</li>
+</ul>
+<div class="shots">
+  <figure><a href="guide_img/12_billing.png" target="_blank"><img src="guide_img/12_billing.png" alt="기기별 차감 시간" loading="lazy"></a><figcaption>① 기기별 다음 차감 예정 시각</figcaption></figure>
+  <figure><a href="guide_img/12b_ledger.png" target="_blank"><img src="guide_img/12b_ledger.png" alt="적립·차감 내역" loading="lazy"></a><figcaption>② 모든 적립·차감 기록</figcaption></figure>
+</div>
+<p class="imgnote">※ 포인트 금액·주기는 운영 기준에 따라 변동될 수 있으며, 실제 값은 앱 안내창에 표시되는 기준을 따릅니다.</p>
+
+<h2 id="s8">8. 포인트 충전 (결제 · 광고)</h2>
+<h3>충전(결제)</h3>
+<ol>
+  <li>홈에서 <strong>[충전]</strong>을 누르면 포인트 패키지 목록이 표시됩니다.</li>
+  <li>원하는 패키지를 선택하면 <strong>Google Play 결제창</strong>이 열립니다. 결제를 완료하면 포인트가 즉시 적립됩니다.</li>
+</ol>
+<div class="shots">
+  <figure><a href="guide_img/13_recharge.png" target="_blank"><img src="guide_img/13_recharge.png" alt="충전 화면" loading="lazy"></a><figcaption>① 포인트 패키지 선택</figcaption></figure>
+  <figure><a href="guide_img/13b_paysheet.png" target="_blank"><img src="guide_img/13b_paysheet.png" alt="결제창" loading="lazy"></a><figcaption>② Google Play 결제창에서 [원탭 구매]</figcaption></figure>
+</div>
+<h3>광고 보고 무료 포인트 받기</h3>
+<ol>
+  <li>충전 화면 맨 위 <strong>[🎬 광고 보고 포인트 받기]</strong>를 누릅니다.</li>
+  <li>광고가 준비되면 자동으로 재생되고, 끝까지 시청하면 포인트가 적립됩니다. (하루 시청 횟수 제한이 있습니다)</li>
+</ol>
+
+<h2 id="s9">9. 설정 및 관리</h2>
+<p>앱 왼쪽 위 <strong>[☰ 메뉴]</strong>에서 아래 기능을 사용할 수 있습니다.</p>
+<div class="shots">
+  <figure><a href="guide_img/02_menu.png" target="_blank"><img src="guide_img/02_menu.png" alt="메뉴" loading="lazy"></a><figcaption>메뉴 — 로그인 계정과 설정 항목</figcaption></figure>
+  <figure><a href="guide_img/03_theme.png" target="_blank"><img src="guide_img/03_theme.png" alt="테마" loading="lazy"></a><figcaption>테마 설정 (다크/라이트)</figcaption></figure>
+  <figure><a href="guide_img/04_font.png" target="_blank"><img src="guide_img/04_font.png" alt="글꼴" loading="lazy"></a><figcaption>글꼴 크기 설정 (80~150%)</figcaption></figure>
+  <figure><a href="guide_img/06_reorder.png" target="_blank"><img src="guide_img/06_reorder.png" alt="순서 변경" loading="lazy"></a><figcaption>장비 순서 변경 (▲▼)</figcaption></figure>
+</div>
+<ul>
+  <li><strong>테마 설정</strong> — 어두운/밝은 화면 선택</li>
+  <li><strong>글꼴 크기 설정</strong> — 앱 전체 글자 크기 조정 (80%~150%)</li>
+  <li><strong>알림 시간 설정</strong> — 방해 금지 시간대 지정</li>
+  <li><strong>장비 순서 변경</strong> — 홈 화면 카드 순서 정렬</li>
+  <li><strong>장비 연동 해제</strong> — 더 이상 보지 않을 장비 제거</li>
+  <li><strong>이용 방법</strong> — 이 안내 페이지 열기</li>
+  <li><strong>문의&amp;점검 카카오톡 채널</strong> — 카카오톡으로 문의</li>
 </ul>
 
-<h2>7. 설정 및 관리</h2>
-<p>앱 왼쪽 위 <strong>[메뉴]</strong>에서 아래 기능을 사용할 수 있습니다.</p>
+<h2 id="s10">10. 장비 연동 해제</h2>
+<ol>
+  <li><strong>[메뉴 &gt; 장비 연동 해제]</strong>에서 해제할 장비를 선택하고 <strong>[선택 대상 연동 해제]</strong>를 누릅니다. (장비 상세 화면 맨 아래 <strong>[연동 해제]</strong> 버튼으로도 가능합니다)</li>
+  <li>확인창에서 <strong>[연동 해제]</strong>를 누르면 완료됩니다. 해제된 장비는 더 이상 포인트가 차감되지 않습니다.</li>
+</ol>
+<div class="shots">
+  <figure><a href="guide_img/18_unpair.png" target="_blank"><img src="guide_img/18_unpair.png" alt="연동 해제" loading="lazy"></a><figcaption>① 해제할 장비 선택</figcaption></figure>
+  <figure><a href="guide_img/18b_unpair_confirm.png" target="_blank"><img src="guide_img/18b_unpair_confirm.png" alt="해제 확인" loading="lazy"></a><figcaption>② 확인창에서 [연동 해제]</figcaption></figure>
+</div>
+
+<h2 id="s11">11. 로그아웃 · 회원 탈퇴</h2>
 <ul>
-  <li><strong>테마 설정</strong> — 밝은/어두운 화면</li>
-  <li><strong>글꼴 크기 설정</strong> — 글자 크기 조정</li>
-  <li><strong>알림 시간 설정</strong> — 알림 받을 시간대 지정</li>
-  <li><strong>장비 순서 변경</strong> — 노드 카드 순서 정렬</li>
-  <li><strong>장비 연동 해제</strong> — 더 이상 보지 않을 노드 제거</li>
+  <li><strong>로그아웃</strong> — [메뉴 &gt; 로그아웃]. 로그아웃해도 계정·포인트·장비 정보는 서버에 안전하게 유지되며, 다시 로그인하면 그대로 복구됩니다.</li>
+  <li><strong>회원 탈퇴</strong> — [메뉴 &gt; 회원 탈퇴]. 탈퇴를 신청하면 모니터링이 중지되고 <strong>90일 보관 후 계정이 영구 삭제</strong>됩니다. 보관 기간 내 다시 로그인하면 복구할 수 있습니다.</li>
+</ul>
+<div class="shots">
+  <figure><a href="guide_img/16_logout.png" target="_blank"><img src="guide_img/16_logout.png" alt="로그아웃" loading="lazy"></a><figcaption>로그아웃 확인창</figcaption></figure>
+  <figure><a href="guide_img/17_withdraw.png" target="_blank"><img src="guide_img/17_withdraw.png" alt="회원 탈퇴" loading="lazy"></a><figcaption>회원 탈퇴 확인창 (90일 보관 후 삭제)</figcaption></figure>
+</div>
+
+<h2 id="s12">12. 자주 묻는 질문</h2>
+<ul>
+  <li><strong>Q. 장비가 오프라인으로 표시됩니다.</strong><br>
+      A. PC가 꺼져 있거나, PC 프로그램이 종료되었거나, 인터넷 연결이 끊긴 경우입니다. PC 프로그램이 트레이에서 실행 중인지 확인해 주세요.</li>
+  <li><strong>Q. 포인트가 부족하면 어떻게 되나요?</strong><br>
+      A. 해당 장비의 모니터링과 알림이 중지됩니다. 충전 후 장비의 <strong>[활성화]</strong> 버튼을 누르면 즉시 재개됩니다.</li>
+  <li><strong>Q. 다른 휴대폰에서 로그인했더니 기존 휴대폰이 로그아웃됐어요.</strong><br>
+      A. 보안을 위해 <strong>한 계정은 한 휴대폰에서만</strong> 로그인이 유지됩니다. 가장 최근에 로그인한 기기가 사용 기기가 됩니다.</li>
+  <li><strong>Q. 장비를 오래 꺼두면 어떻게 되나요?</strong><br>
+      A. 7일간 오프라인이 지속되면 연동이 해제됩니다. 다시 사용하려면 QR 연동을 한 번 더 진행해 주세요.</li>
+  <li><strong>Q. 앱을 지웠다 다시 설치하면 포인트가 사라지나요?</strong><br>
+      A. 아니요. 포인트·장비 정보는 계정(서버)에 저장되므로, 같은 Google 계정으로 로그인하면 그대로 복구됩니다.</li>
 </ul>
 
-<h2>8. 문의</h2>
+<h2 id="s13">13. 문의</h2>
 <p>사용 중 궁금한 점이나 문제가 있으면 아래로 연락 주세요.</p>
 <ul>
+  <li>카카오톡 채널: <a href="http://pf.kakao.com/_uBxlxcG/chat" target="_blank">노드S 문의&amp;점검 채널</a> (앱의 [메뉴 &gt; 문의&amp;점검 카카오톡 채널]과 동일)</li>
   <li>이메일: <a href="mailto:bizyongk@gmail.com">bizyongk@gmail.com</a></li>
 </ul>
 
-<p class="updated" style="margin-top:30px;">최종 업데이트: 2026년 6월 26일</p>
+<p class="updated" style="margin-top:30px;">최종 업데이트: 2026년 7월 9일</p>
 </body>
 </html>
